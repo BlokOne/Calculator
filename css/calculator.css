@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  background: #fa8282;
+  color: white;
+}
+:root {
+  --index: calc(1vw + 1vh);
+}
+.works__calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  height: 38vh;
+  transform: translate(-50%,-50%);
+  max-width: 450px;
+}
+.works__title {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: calc(var(--index)* .9);
+}
+
+.calculator {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+}
+
+.calculator__wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.calculator__app {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 56px 0px #000000;
+          box-shadow: 0px 0px 56px 0px #000000;
+  background: -webkit-gradient(linear, right bottom, left top, from(#000000), color-stop(39%, #000000), color-stop(42%, #3e3e3c), color-stop(46%, #000000));
+  background: linear-gradient(to top left, #000000 0%, #000000 39%, #3e3e3c 42%, #000000 46%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.calculator__input {
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: end;
+  font-size: 30px;
+  background-color: transparent;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  font-family: Calculator;
+}
+
+.calculator__buttons {
+  -ms-grid-columns: (24%)[4];
+      grid-template-columns: repeat(4, 24%);
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "plus minus multiply share" 
+ "seven eight nine enter" 
+ "four five six enter" 
+ "one two three enter" 
+ "null comma clear enter";
+  gap: 5px;
+}
+
+.calculator__buttons :nth-child(1n+1) {
+  border: none;
+  -webkit-padding-before: 1.4rem;
+          padding-block-start: 1.4rem;
+  -webkit-padding-after: 1.4rem;
+          padding-block-end: 1.4rem;
+  -webkit-padding-start: 1.25rem;
+          padding-inline-start: 1.25rem;
+  -webkit-padding-end: 1.25rem;
+          padding-inline-end: 1.25rem;
+  font-size: 1.5rem;
+  border-radius: 3px;
+}
+
+.calculator__buttons-enter {
+  background-color: #a6a6a6;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 4;
+  grid-area: enter;
+}
+
+.num__comma {
+  background-color: #a6a6a6;
+}
+
+.num {
+  background-color: #333333;
+}
+
+.num__0 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: null;
+}
+
+.num__1 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.num__2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.num__3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.num__4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.num__5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.num__6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.num__7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.num__8 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.num__9 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.symbol {
+  background-color: #ff9500;
+}
+
+.symbol__plus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: plus;
+}
+
+.symbol__minus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: minus;
+}
+
+.symbol__multiply {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: multiply;
+}
+
+.symbol__share {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: share;
+}
+
+.symbol__C {
+  background-color: #a6a6a6;
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: clear;
+}
