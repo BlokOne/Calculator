@@ -85,7 +85,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 50vw;
   height: 38vh;
   transform: translate(-50%,-50%);
   max-width: 450px;
@@ -152,22 +151,24 @@ body {
 
 .calculator__buttons {
   -ms-grid-columns: (24%)[4];
-      grid-template-columns: repeat(4, 24%);
+  grid-template-columns: repeat(4, 23%);
   background-color: transparent;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
   border-radius: 5px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "plus minus multiply share" 
- "seven eight nine enter" 
- "four five six enter" 
- "one two three enter" 
- "null comma clear enter";
+  grid-template-areas:
+      "plus minus multiply share"
+      "seven eight nine enter"
+      "four five six enter"
+      "one two three enter"
+      "null comma clear enter";
   gap: 5px;
+  justify-content: center;
 }
 
 .calculator__buttons :nth-child(1n+1) {
